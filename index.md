@@ -3479,7 +3479,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 ```
 
-###### [BEFORE 👈](https://github.com/LaPrInMedi-Studio/themes-of-blogspot/sheet2.md)
-###### [NEXT 👉](https://github.com/LaPrInMedi-Studio/themes-of-blogspot/sheet2.md)
+###### [ 👈 BEFORE](https://github.com/LaPrInMedi-Studio/themes-of-blogspot/sheet2.md) [NEXT 👉](https://github.com/LaPrInMedi-Studio/themes-of-blogspot/sheet2.md)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
