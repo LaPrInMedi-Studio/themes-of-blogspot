@@ -54,7 +54,7 @@
 
 <meta content='IE=9; IE=8; IE=7; IE=EDGE; chrome=1' http-equiv='X-UA-Compatible'/>
 <meta content='true' name='HandheldFriendly'/>
-<meta property="og:image" content="https://1.bp.blogspot.com/-fEVooCqkj-Q/YAeANC3finI/AAAAAAAAUwk/o0auKok6iJ4WlY1aprGZZvY-QoN9zkdOACLcBGAsYHQ/s1024/slider1-empanada.jpg"/>
+<meta content='https://1.bp.blogspot.com/-fEVooCqkj-Q/YAeANC3finI/AAAAAAAAUwk/o0auKok6iJ4WlY1aprGZZvY-QoN9zkdOACLcBGAsYHQ/s1024/slider1-empanada.jpg' property='og:image'/>
 <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap' rel='stylesheet'/> <!--fuentes tipografia -->
@@ -1322,9 +1322,9 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
 
 <!-- Customize Top Menu Here -->
 
-<li class='bhider'><a href=''><i class='fa fa-map-marker'/> Ubicacion</a></li>   
+<li class='bhider'><a href='https://www.google.com.ar/maps/place/San+Crist%C3%B3bal,+CABA/@-34.6307901,-58.401728,14z/data=!4m5!3m4!1s0x95bccb1d945c8459:0xccf24520f594eeef!8m2!3d-34.6237933!4d-58.4022563'><i class='fa fa-map-marker'/> Ubicacion</a></li>   
 
-<li class='bhider'><a href=''><i class='fa fa-headphones'/> Consultas</a></li>   
+<li class='bhider'><a href=' '><i class='fa fa-headphones'/> Consultas</a></li>   
 
 </ul>
 
@@ -1340,7 +1340,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
 <div class='topper'>
 
    <b:section class='header-logo' id='header' name='Header' showaddelement='false'>
-     <b:widget id='Header1' locked='true' title='La Empanaderia de capital (Cabecera)' type='Header' version='2' visible='true'>
+     <b:widget id='Header1' locked='true' title='La Empanaderia de capital (Encabezado)' type='Header' version='2' visible='true'>
        <b:widget-settings>
          <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-emTF1bHZvgY/YAOV2P4dXtI/AAAAAAAAUtE/O-RHjV8xpMwrux43wt4_sni8oaM85eagwCK4BGAYYCw/s1600/logo-empanaderia.png</b:widget-setting>
          <b:widget-setting name='displayHeight'>57</b:widget-setting>
@@ -1458,7 +1458,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
               <div class='cart-buttons-wrap'>
                 <div class='cart-amount'><span class='cart-subtotal'>SUBTOTAL :</span><span class='simpleCart_total'/></div>
                 <div class='cart-buttons'>
-                  <a class='simpleCart_empty' href='javascript:;'><span>Empty cart</span></a><a class='simpleCart_checkout' href='/p/checkout.html'><span><i class='fa fa-credit-card'/> Checkout</span></a>
+                  <a class='simpleCart_empty' href='javascript:;'><span>Carrito vacio</span></a><a class='simpleCart_checkout' href='/p/checkout.html'><span><i class='fa fa-credit-card'/> Verificar</span></a>
                 </div>
               </div>
             </div>
@@ -1502,8 +1502,12 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
 <li><a class='animate__animated animate__zoomIn'>Recetas</a></li>
 
 <li class='animate__animated animate__zoomIn'><a>Consejos</a></li>
-  
-<li class='animate__animated animate__zoomIn'><a>Tipos de Empanadas</a></li>
+<li class='with-ul'><a href='#'>Tipos de empanadas</a>
+<ul>
+<li><a href='https://laempanaderiadecapital.blogspot.com/search/label/carne'>Vegetales</a></li>
+<li><a href='https://laempanaderiadecapital.blogspot.com/search/label/carne'>Carne</a></li>
+</ul>
+</li>
 
 <li class='animate__animated animate__zoomIn'><a>Lugares Recomendados</a></li>
 
@@ -1706,7 +1710,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
               <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
               <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
               <b:widget-setting name='timestampLabel'/>
-              <b:widget-setting name='reactionsLabel'>Reactions</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'/>
               <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
               <b:widget-setting name='style.layout'>1x1</b:widget-setting>
               <b:widget-setting name='showLocation'>false</b:widget-setting>
@@ -1725,7 +1729,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
               <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
               <b:widget-setting name='showBacklinks'>true</b:widget-setting>
               <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-              <b:widget-setting name='showReactions'>true</b:widget-setting>
+              <b:widget-setting name='showReactions'>false</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main' var='this'> 
 
@@ -2242,6 +2246,11 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
     <b:include name='platformShare'/>
   </b:with>
 </b:includable>
+            <b:includable id='manageComments'>
+  <a expr:href='data:post.manageCommentsUrl' expr:onclick='data:post.manageCommentsUrlOnclick'>
+    <b:message name='messages.manageComments'/>
+  </a>
+</b:includable>
             <b:includable id='nextPageLink'>
               <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
                 <data:messages.olderPosts/>
@@ -2602,15 +2611,14 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
 
               <div class='sidebar-container1 sidebar-wrapper top' role='complementary'>
 
-                  <b:section class='sidebar' id='sidebar_feed' name='Sidebar' preferred='yes'/>
-                  <b:section id='sidebar_item' name='Sidebar (Item Page)'>
-                    <b:widget id='Image6' locked='false' title='' type='Image' visible='true'>
+                  <b:section class='sidebar' id='sidebar_feed' name='Sidebar' preferred='yes'>
+                    <b:widget id='Image6' locked='false' title='' type='Image' visible='false'>
                       <b:widget-settings>
-                        <b:widget-setting name='displayUrl'>http://1.bp.blogspot.com/-QVKawAupKa4/XpCrGBsaznI/AAAAAAAABbI/ohQ6SxuD2cIiWltcStTLmlKECeHerYTbgCK4BGAYYCw/s1600/sidebar-260x600%2Bad.png</b:widget-setting>
-                        <b:widget-setting name='displayHeight'>556</b:widget-setting>
+                        <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-9FD4FjJOpJI/YBZDb1H4zzI/AAAAAAAAU0k/s-vMo8iELQ0CZ2fZMlrx6h3reY04snovACK4BGAYYCw/s241/sidebar-260x600%25252Bad.jpg</b:widget-setting>
+                        <b:widget-setting name='displayHeight'>241</b:widget-setting>
                         <b:widget-setting name='sectionWidth'>241</b:widget-setting>
-                        <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
-                        <b:widget-setting name='displayWidth'>241</b:widget-setting>
+                        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                        <b:widget-setting name='displayWidth'>104</b:widget-setting>
                         <b:widget-setting name='link'>/</b:widget-setting>
                         <b:widget-setting name='caption'/>
                       </b:widget-settings>
@@ -2629,6 +2637,19 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
     <b:if cond='data:caption'>
       <span class='caption'><data:caption/></span>
     </b:if>
+  </div>
+</b:includable>
+                    </b:widget>
+                  </b:section>
+                  <b:section id='sidebar_item' name='Sidebar (Item Page)'>
+                    <b:widget id='HTML5' locked='false' title='' type='HTML' visible='true'>
+                      <b:widget-settings>
+                        <b:widget-setting name='content'><![CDATA[<img src="https://media.giphy.com/media/fuVezYS3uOabiQSpv6/giphy.gif" />]]></b:widget-setting>
+                      </b:widget-settings>
+                      <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
   </div>
 </b:includable>
                     </b:widget>
@@ -2934,7 +2955,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
                         <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
                         <b:widget-setting name='display'>LIST</b:widget-setting>
                         <b:widget-setting name='selectedLabelsList'/>
-                        <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+                        <b:widget-setting name='showType'>ALL</b:widget-setting>
                         <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
                       </b:widget-settings>
                       <b:includable id='main' var='this'>
@@ -3004,11 +3025,11 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
 <div class='gap'>
 <div class='bow'>
 <b:section class='banner2' id='Adder1' maxwidgets='1' name='Ad banner (left)' showaddelement='yes'>
-  <b:widget id='Image1' locked='false' title='Ad banner 1' type='Image' visible='true'>
+  <b:widget id='Image1' locked='false' title='Ad banner 1' type='Image' visible='false'>
     <b:widget-settings>
       <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-27YXjTRi4ug/Xo9n96N33PI/AAAAAAAABaw/C1hik36SUEUGKL4ohp-azMjURuCDFGM-gCK4BGAYYCw/s1600/adder-1.png</b:widget-setting>
       <b:widget-setting name='displayHeight'>253</b:widget-setting>
-      <b:widget-setting name='sectionWidth'>752</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>359</b:widget-setting>
       <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
       <b:widget-setting name='displayWidth'>570</b:widget-setting>
       <b:widget-setting name='link'>/</b:widget-setting>
@@ -3034,11 +3055,11 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
   </b:widget>
 </b:section>
 <b:section class='banner2' id='Adder2' maxwidgets='1' name='Ad banner (right)' showaddelement='yes'>
-  <b:widget id='Image2' locked='false' title='Ad banner 2' type='Image' version='2' visible='true'>
+  <b:widget id='Image2' locked='false' title='Ad banner 2' type='Image' version='2' visible='false'>
     <b:widget-settings>
       <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-fONWRjqKdzE/Xo9oBBH9TZI/AAAAAAAABa4/NHtiKoZryK0cmUbOgPJrgPQswQVPL-98wCK4BGAYYCw/s1600/adder-2.png</b:widget-setting>
       <b:widget-setting name='displayHeight'>253</b:widget-setting>
-      <b:widget-setting name='sectionWidth'>752</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>359</b:widget-setting>
       <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
       <b:widget-setting name='displayWidth'>570</b:widget-setting>
       <b:widget-setting name='link'>/</b:widget-setting>
@@ -3128,7 +3149,7 @@ $(document).ready(function() { $("#slider1").sliderResponsive({// Using default 
   </b:widget>
 </b:section>
 <b:section class='footer' id='footer2' preferred='yes'>
-  <b:widget id='HTML2' locked='false' title='Services' type='HTML' visible='false'>
+  <b:widget id='HTML2' locked='false' title='Services' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#39;/&#39;&gt;FAQ&#39;s&lt;/a&gt;&lt;/li&gt;
@@ -3414,12 +3435,12 @@ var _0x71d9=["\x73\x74\x72\x69\x6E\x67","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","
 
 if (window['location']['href']['indexOf']('/p/checkout.html') > -1) {
      document['title'] = 'Checkout';
-     $('.item-post .post-body')['html']('<div class="my-shopping"><h2>Billing Details</h2><div class="cart-review-wrap"><div id="contact" class="form-bret"><form name="contact-form"><label  class="">Your name&nbsp;<abbr class="required" title="required">*</abbr></label><input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" placeholder="" size="30" type="text" value=""/><label class="">Email address&nbsp;<abbr class="required" title="required">*</abbr></label><input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" placeholder="" size="30" type="text" value=""/><label class="">Phone and Street address&nbsp;<abbr class="required" title="required">*</abbr></label><textarea class="contact-form-email-message" cols="25" id="ContactForm1_contact-form-email-message" name="email-message" placeholder="" rows="5"></textarea><div class="checkout-wrap"><div class="simpleCart_items"/><div style="clear: both;"/><div class="cart-bot-element"><div class="cart-amount"><div class="cart-subtotal">Subtotal :<span class="simpleCart_total"/></div><h4>Your order : </h4><div class="carter">You have <span class="simpleCart_quantity"/> item(s) in your Cart.</div><div class="my-total">Total: <span class="simpleCart_total"/></div></div><a class="simpleCart_checkout" href="javascript:;"><input class="checkout-bill" id="ContactForm1_contact-form-submit" type="button" value="Place order"></a></div></div></form></div></div></div><style>h1.post-title {display: none!important; }</style>');
+     $('.item-post .post-body')['html']('<div class="my-shopping"><h2>Detalles de Facturacion</h2><div class="cart-review-wrap"><div id="contact" class="form-bret"><form name="contact-form"><label  class="">Nombre&nbsp;<abbr class="required" title="required">*</abbr></label><input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" placeholder="" size="30" type="text" value=""/><label class="">E-mail&nbsp;<abbr class="required" title="required">*</abbr></label><input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" placeholder="" size="30" type="text" value=""/><label class="">Telefono y direccion&nbsp;<abbr class="required" title="required">*</abbr></label><textarea class="contact-form-email-message" cols="25" id="ContactForm1_contact-form-email-message" name="email-message" placeholder="" rows="5"></textarea><div class="checkout-wrap"><div class="simpleCart_items"/><div style="clear: both;"/><div class="cart-bot-element"><div class="cart-amount"><div class="cart-subtotal">Subtotal :<span class="simpleCart_total"/></div><h4>Su orden : </h4><div class="carter">Tienes <span class="simpleCart_quantity"/> item(s) en tu carrito.</div><div class="my-total">Total: <span class="simpleCart_total"/></div></div><a class="simpleCart_checkout" href="javascript:;"><input class="checkout-bill" id="ContactForm1_contact-form-submit" type="button" value="Place order"></a></div></div></form></div></div></div><style>h1.post-title {display: none!important; }</style>');
  };
 
  if (window['location']['href']['indexOf']('/p/cart.html') > -1) {
      document['title'] = 'Shopping Cart';
-     $('.item-post .post-body')['html']('<div class="my-shopping check"><h2>Shopping Cart</h2><div class="cart-review-wrap"><div class="simpleCart_items"/><div style="clear: both;"/><div class="cart-bot-element"><div class="cart-amount"><div class="cart-subtotal">Subtotal :<span class="simpleCart_total"/></div><h4>Your cart : </h4><div class="carter">You have <span class="simpleCart_quantity"/> item(s) in your Cart.</div><div class="my-total">Total: <span class="simpleCart_total"/></div></div><a class="simpleCart_checkout" href="/p/checkout.html">Proceed to Checkout</a></div></div></div><style>.item-post h1.post-title { display: none!important; }</style>');
+     $('.item-post .post-body')['html']('<div class="my-shopping check"><h2>Carrito de compras</h2><div class="cart-review-wrap"><div class="simpleCart_items"/><div style="clear: both;"/><div class="cart-bot-element"><div class="cart-amount"><div class="cart-subtotal">Subtotal :<span class="simpleCart_total"/></div><h4>Tu carrito : </h4><div class="carter">Tu tienes <span class="simpleCart_quantity"/> item(s) en tu carrito.</div><div class="my-total">Total: <span class="simpleCart_total"/></div></div><a class="simpleCart_checkout" href="/p/checkout.html">Proceder a verificar</a></div></div></div><style>.item-post h1.post-title { display: none!important; }</style>');
  };
 //]]>
 </script>
